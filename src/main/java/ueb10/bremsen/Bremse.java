@@ -1,6 +1,23 @@
 package ueb10.bremsen;
 
-public interface Bremse {
-	void bremsen();
-	boolean brauchtService();
+public abstract class Bremse {
+	private String hersteller;
+	private String seriennummer;
+
+	public Bremse(String hersteller, String seriennummer) {
+		this.hersteller = hersteller;
+		this.seriennummer = seriennummer;
+	}
+
+	public abstract void bremsen();
+	public abstract boolean brauchtService();
+
+
+	public String getHersteller() {
+		return hersteller;
+	}
+
+	public String getSeriennummer() {
+		return seriennummer;
+	}
 }
